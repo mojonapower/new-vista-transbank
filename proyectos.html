@@ -109,7 +109,7 @@
                                                 <th> 04/2018</th>
                                                 <th> 05/2018</th>
                                                 <th>
-                                                    <button href="#" class="btn btn-primary btn-sm">Agregar Recurso</button>
+                                                    <button href="#" class="btn btn-primary btn-sm" onclick="showDivAgregarRecurso()">Agregar Recurso</button>
                                                 </th>
                                             </tr>
                                         </thead>
@@ -284,31 +284,128 @@
                                                     <td>
                                                         43
                                                     </td>
-                                                                                                    <td>
-                                                    <a data-toggle="modal" href="#normalModal" class="btn btn-default">
-                                                        <button href="#" class="btn btn-primary btn-sm">Ver Recurso</button>
-                                                    </a>
-                                                    <div id="normalModal" class="modal fade">
-                                                        <div class="modal-dialog">
-                                                            <div class="modal-content">
-                                                                <div class="modal-header">
-                                                                    <h4 class="modal-title">Titulo modal</h4>
-                                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                    <td>
+                                                        <a data-toggle="modal" href="#normalModal" class="btn btn-default">
+                                                            <button href="#" class="btn btn-primary btn-sm">Ver Recurso</button>
+                                                        </a>
+                                                        <div id="normalModal" class="modal fade">
+                                                            <div class="modal-dialog">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <h4 class="modal-title">Titulo modal</h4>
+                                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        <p>content&hellip;</p>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                                        <button type="button" class="btn btn-primary">Guardar Cambios</button>
+                                                                    </div>
                                                                 </div>
-                                                                <div class="modal-body">
-                                                                    <p>content&hellip;</p>
-                                                                </div>
-                                                                <div class="modal-footer">
-                                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                                                    <button type="button" class="btn btn-primary">Guardar Cambios</button>
-                                                                </div>
+                                                                <!-- /.modal-content -->
                                                             </div>
-                                                            <!-- /.modal-content -->
+                                                            <!-- /.modal-dialog -->
                                                         </div>
-                                                        <!-- /.modal-dialog -->
-                                                    </div>
-                                                    <!-- /.modal -->
+                                                        <!-- /.modal -->
+                                                    </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                                    </div>
+                                </div>
+                                <div class="table-responsive" id="div-AgregarRecurso" style="display:none;">
+                                    <table class="table center-aligned-table">
+                                        <thead>
+                                            <!--aca quiero un TR que abarque todos los tr que tengan que ver con el tiempo -->
+                                            <tr class="text-primary">
+                                                <th>
+                                                    <label for="form-field-select-1"> Rol</label>
+                                                    <select class="form-control" id="form-field-select-1">
+                                                        <option value="p1">Project Management</option>
+                                                        <option value="p1">Bussines Analyst</option>
+                                                        <option value="p1">Quality Assurance</option>
+                                                    </select>
+                                                </th>
+                                                <th>Nombre</th>
+                                                <th>Empresa</th>
+                                                <th> 01/2018</th>
+                                                <th> 02/2018</th>
+                                                <th> 03/2018</th>
+                                                <th> 04/2018</th>
+                                                <th> 05/2018</th>
+                                                <th>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>Project Management</th>
+                                                <td>Juan Malverde</td>
+                                                <td></td>
+                                                <td>
+                                                    20
                                                 </td>
+                                                <td>
+                                                    30
+                                                </td>
+                                                <td>
+                                                    13
+                                                </td>
+                                                <td>
+                                                    32
+                                                </td>
+                                                <td>
+                                                    43
+                                                </td>
+                                                <td>
+                                                    <button href="#" class="btn btn-primary btn-sm">Agregar Recurso</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Project Management</th>
+                                                <td>Pepe Gacitua</td>
+                                                <td></td>
+                                                <td>
+                                                    20
+                                                </td>
+                                                <td>
+                                                    30
+                                                </td>
+                                                <td>
+                                                    13
+                                                </td>
+                                                <td>
+                                                    32
+                                                </td>
+                                                <td>
+                                                    43
+                                                </td>
+                                                <td>
+                                                    <button href="#" class="btn btn-primary btn-sm">Agregar Recurso</button>
+                                                </td>
+                                                <tr>
+                                                    <th>Project Management</th>
+                                                    <td>Jose Meneses</td>
+                                                    <td></td>
+                                                    <td>
+                                                        20
+                                                    </td>
+                                                    <td>
+                                                        30
+                                                    </td>
+                                                    <td>
+                                                        13
+                                                    </td>
+                                                    <td>
+                                                        32
+                                                    </td>
+                                                    <td>
+                                                        43
+                                                    </td>
+                                                    <td>
+                                                        <button href="#" class="btn btn-primary btn-sm">Agregar Recurso</button>
+                                                    </td>
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -349,6 +446,7 @@
                 x.style.display = "none";
             }
         }
+
         function showDivEdit() {
             var x = document.getElementById('div-edit');
             if (x.style.display === "none") {
@@ -357,6 +455,7 @@
                 x.style.display = "none";
             }
         }
+
         function showDivDelete() {
             var x = document.getElementById('div-delete');
             if (x.style.display === "none") {
@@ -365,8 +464,18 @@
                 x.style.display = "none";
             }
         }
+
         function showDivEditHH() {
             var x = document.getElementById('div-edithh');
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+
+        function showDivAgregarRecurso() {
+            var x = document.getElementById('div-AgregarRecurso');
             if (x.style.display === "none") {
                 x.style.display = "block";
             } else {
