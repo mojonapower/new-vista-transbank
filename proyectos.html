@@ -148,14 +148,14 @@
                                                                     <div class="table-responsive">
                                                                         <button type="button" class="btn btn-secondary mr-2" onclick="showDivEdit()"><i class="fa fa-edit"> </i>Cambiar Recurso</button>
                                                                         <button type="button" class="btn btn-secondary mr-2" onclick="showDivEditHH()"><i class="fa fa-clock-o"></i> Editar HH</button>
-                                                                        <button type="button" class="btn btn-secondary mr-2" onclick="showDivDelete()"><i class="fa fa-times-rectangle-o"></i> ELiminar Recurso</button>
+                                                                        <button type="button" class="btn btn-secondary mr-2" onclick="showDivDelete()"><i class="fa fa-times-rectangle-o"></i> ELiminar</button>
                                                                     </div>
                                                                     <hr>
                                                                     <div class="card-body" id="div-edit" style="display:none;">
                                                                         <div>
                                                                             <label for="form-field-select-1"> <strong>Reemplazar Jefe Proyecto</strong></label>
                                                                             <select class="form-control" id="form-field-select-1">
-                                                                                <option value=""> Jefe PRoyecto Disponible</option>
+                                                                                <option value=""> Jefe Proyecto Disponible</option>
                                                                                 <option value="p1">JP 1</option>
                                                                                 <option value="p1">JP 2</option>
                                                                                 <option value="p1">JP 3</option>
@@ -163,31 +163,62 @@
                                                                         </div>
                                                                     </div>
                                                                     <div class="card-body" id="div-edithh" style="display:none;">
-                                                                        <tr class="text-primary">
-                                                                            <th>Nombre</th>
-                                                                            <th> 01/2018</th>
-                                                                            <th> 02/2018</th>
-                                                                            <th> 03/2018</th>
-                                                                            <th> 04/2018</th>
-                                                                            <th> 05/2018</th>
-
-                                                                        </tr>
+                                                                        <div class="table-responsive">
+                                                                            <table class="table center-aligned-table">
+                                                                                <thead>
+                                                                                    <!--aca quiero un TR que abarque todos los tr que tengan que ver con el tiempo -->
+                                                                                    <tr class="text-primary">
+                                                                                        <th>Rol</th>
+                                                                                        <th>Nombre</th>
+                                                                                        <th>Empresa</th>
+                                                                                        <th> 01/2018</th>
+                                                                                        <th> 02/2018</th>
+                                                                                        <th> 03/2018</th>
+                                                                                        <th> 04/2018</th>
+                                                                                        <th> 05/2018</th>
+                                                                                    </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                    <th>Proyect Management</th>
+                                                                                    <th>Juan Malverde</th>
+                                                                                    <th></th>
+                                                                                    <th>
+                                                                                        <input type="input-number" name="quant[1]" class="form-control input-number" value="20" min="1" max="32" placeholder="">
+                                                                                    </th>
+                                                                                    <th>
+                                                                                        <input type="input-number" name="quant[10]" class="form-control input-number" value="30" min="1" max="32">
+                                                                                    </th>
+                                                                                    <th>
+                                                                                        <input type="input-number" name="quant[1]" class="form-control input-number" value="13" min="1" max="32">
+                                                                                    </th>
+                                                                                    <th>
+                                                                                        <input type="input-number" name="quant[1]" class="form-control input-number" value="32" min="1" max="32">
+                                                                                    </th>
+                                                                                    <th>
+                                                                                        <input type="input-number" name="quant[1]" class="form-control input-number" value="43" min="1" max="32">
+                                                                                    </th>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div>
                                                                     </div>
                                                                     <div class="card-body" id="div-delete" style="display:none;">
-                                                                        content3
+                                                                        <div class="form-check">
+                                                                            <label>
+                                                                                <input type="checkbox" class="form-check-input"> Programa
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                                        <button type="button" class="btn btn-primary">Guardar Cambios</button>
                                                                     </div>
                                                                 </div>
-                                                                <div class="modal-footer">
-                                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                                                    <button type="button" class="btn btn-primary">Guard Cambios</button>
-                                                                </div>
+                                                                <!-- /.modal-content -->
                                                             </div>
-                                                            <!-- /.modal-content -->
+                                                            <!-- /.modal-dialog -->
                                                         </div>
-                                                        <!-- /.modal-dialog -->
-                                                    </div>
-                                                    <!-- /.modal -->
-                                                    <!-- /.modal -->
+                                                        <!-- /.modal -->
+                                                        <!-- /.modal -->
                                                 </td>
                                             </tr>
                                             <tr>
@@ -257,78 +288,78 @@
                                                 </tr>
                                         </tbody>
                                     </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- partial:partials/_footer.html -->
-                <footer class="footer">
-                    <div class="container-fluid clearfix">
-                        <span class="float-right">
+                    <!-- partial:partials/_footer.html -->
+                    <footer class="footer">
+                        <div class="container-fluid clearfix">
+                            <span class="float-right">
                 
             </span>
-                    </div>
-                </footer>
-                <!-- partial -->
+                        </div>
+                    </footer>
+                    <!-- partial -->
+                </div>
             </div>
         </div>
-    </div>
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="node_modules/chart.js/dist/Chart.min.js"></script>
-    <script src="node_modules/perfect-scrollbar/dist/js/perfect-scrollbar.jquery.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5NXz9eVnyJOA81wimI8WYE08kW_JMe8g&callback=initMap" async defer></script>
-    <script src="js/off-canvas.js"></script>
-    <script src="js/hoverable-collapse.js"></script>
-    <script src="js/misc.js"></script>
-    <script src="js/chart.js"></script>
-    <script>
-    //mostrar y ocultar divs :DDDD 
-    function showDiv() {
-        var x = document.getElementById('div-busquedaavanzada');
-        if (x.style.display === "none") {
-            x.style.display = "block";
-        } else {
-            x.style.display = "none";
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="node_modules/chart.js/dist/Chart.min.js"></script>
+        <script src="node_modules/perfect-scrollbar/dist/js/perfect-scrollbar.jquery.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5NXz9eVnyJOA81wimI8WYE08kW_JMe8g&callback=initMap" async defer></script>
+        <script src="js/off-canvas.js"></script>
+        <script src="js/hoverable-collapse.js"></script>
+        <script src="js/misc.js"></script>
+        <script src="js/chart.js"></script>
+        <script>
+        //mostrar y ocultar divs :DDDD 
+        function showDiv() {
+            var x = document.getElementById('div-busquedaavanzada');
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
         }
-    }
 
-    function showDivEdit() {
-        var x = document.getElementById('div-edit');
-        if (x.style.display === "none") {
-            x.style.display = "block";
-        } else {
-            x.style.display = "none";
+        function showDivEdit() {
+            var x = document.getElementById('div-edit');
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
         }
-    }
 
-    function showDivDelete() {
-        var x = document.getElementById('div-delete');
-        if (x.style.display === "none") {
-            x.style.display = "block";
-        } else {
-            x.style.display = "none";
+        function showDivDelete() {
+            var x = document.getElementById('div-delete');
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
         }
-    }
 
-    function showDivEditHH() {
-        var x = document.getElementById('div-edithh');
-        if (x.style.display === "none") {
-            x.style.display = "block";
-        } else {
-            x.style.display = "none";
+        function showDivEditHH() {
+            var x = document.getElementById('div-edithh');
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
         }
-    }
-    </script>
-    <script>
-    //modal para modificar los Recursos
-    $(".modal-wide").on("show.bs.modal", function() {
-        var height = $(window).height() - 200;
-        $(this).find(".modal-body").css("max-height", height);
-    });
-    </script>
+        </script>
+        <script>
+        //modal para modificar los Recursos
+        $(".modal-wide").on("show.bs.modal", function() {
+            var height = $(window).height() - 200;
+            $(this).find(".modal-body").css("max-height", height);
+        });
+        </script>
 </body>
 
 </html>
