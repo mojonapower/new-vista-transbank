@@ -97,7 +97,7 @@
                         <div class="card col-lg-12 px-0 mb-4">
                             <div class="card-body">
                                 <div class="table-responsive">
-                                    <table class="table center-aligned-table">
+                                    <table class="table center-aligned-table" id="myTable">
                                         <thead>
                                             <!--aca quiero un TR que abarque todos los tr que tengan que ver con el tiempo -->
                                             <tr class="text-primary">
@@ -114,7 +114,7 @@
                                                 </th>
                                             </tr>
                                         </thead>
-                                        <tbody>
+                                        <tbody id="tr1">
                                             <tr>
                                                 <th>Project Management</th>
                                                 <td>Juan Malverde</td>
@@ -136,11 +136,11 @@
                                                 </td>
                                                 <td>
                                                     <button type="button" class="btn btn-outline-info mr-2" onclick="showDivEditHH()"> <i class="fa fa-clock-o"></i> Editar HH</button>
-                                                    <button type="button" class="btn btn-outline-warning mr-2"><i class="fa fa-mail-reply"></i> Reemplazar</button>
-                                                    <button type="button" class="btn btn-outline-danger"><i class="fa fa-times"></i>Eliminar</button>
+                                                    <button type="button" class="btn btn-outline-warning mr-2" onclick="showDivReplace()"><i class="fa fa-mail-reply"></i> Reemplazar</button>
+                                                    <button type="button" class="btn btn-outline-danger" onclick="Eliminar()"><i class="fa fa-times"></i>Eliminar</button>
                                                 </td>
                                             </tr>
-                                            <tr>
+                                            <tr id="tr1">
                                                 <th>Bussines Analyst</th>
                                                 <td>Pepe Gacitua</td>
                                                 <td></td>
@@ -162,7 +162,7 @@
                                                 <td>
                                                     <button type="button" class="btn btn-outline-info mr-2" onclick="showDivEditHH()"> <i class="fa fa-clock-o"></i> Editar HH</button>
                                                     <button type="button" class="btn btn-outline-warning mr-2"><i class="fa fa-mail-reply"></i> Reemplazar</button>
-                                                    <button type="button" class="btn btn-outline-danger"><i class="fa fa-times"></i>Eliminar</button>
+                                                    <button type="button" class="btn btn-outline-danger" onclick="Eliminar()"><i class="fa fa-times"></i>Eliminar</button>
                                                 </td>
                                                 <tr>
                                                     <th>Quality Assurance</th>
@@ -186,8 +186,7 @@
                                                     <td>
                                                         <button type="button" class="btn btn-outline-info mr-2" onclick="showDivEditHH()"> <i class="fa fa-clock-o"></i> Editar HH</button>
                                                         <button type="button" class="btn btn-outline-warning mr-2"><i class="fa fa-mail-reply"></i> Reemplazar</button>
-                                                        <button type="button" class="btn btn-outline-danger"><i class="fa fa-times"></i>Eliminar</button>
-                                                    </td>
+                                                        <button type="button" class="btn btn-outline-danger" onclick="Eliminar()"><i class="fa fa-times"></i>Eliminar</button>
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -238,7 +237,7 @@
                                                 43
                                             </td>
                                             <td>
-                                                <button type="button" class="btn btn-outline-success mr-2">Agregar Recurso</button>
+                                                <button type="button" class="btn btn-outline-success mr-2" onclick="AgregarRecurso()">Agregar Recurso</button>
                                             </td>
                                         </tr>
                                         <tr>
@@ -289,6 +288,102 @@
                                     </tbody>
                                 </table>
                             </div>
+                            <div class="table-responsive" id="div-replace" style="display:none;">
+                                <table class="table center-aligned-table">
+                                    <thead>
+                                        <!--aca quiero un TR que abarque todos los tr que tengan que ver con el tiempo -->
+                                        <tr class="text-primary">
+                                            <th>
+                                                <label for="form-field-select-1"> Rol</label>
+                                                <select class="form-control" id="form-field-select-1">
+                                                    <option value="p1">Project Management</option>
+                                                    <option value="p1">Bussines Analyst</option>
+                                                    <option value="p1">Quality Assurance</option>
+                                                </select>
+                                            </th>
+                                            <th>Nombre</th>
+                                            <th>Empresa</th>
+                                            <th> 01/2018</th>
+                                            <th> 02/2018</th>
+                                            <th> 03/2018</th>
+                                            <th> 04/2018</th>
+                                            <th> 05/2018</th>
+                                            <th>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>Project Management</th>
+                                            <td>Juan Buenverde</td>
+                                            <td></td>
+                                            <td>
+                                                20
+                                            </td>
+                                            <td>
+                                                30
+                                            </td>
+                                            <td>
+                                                13
+                                            </td>
+                                            <td>
+                                                32
+                                            </td>
+                                            <td>
+                                                43
+                                            </td>
+                                            <td>
+                                               <button type="button" class="btn btn-outline-warning mr-2" onclick="Reemplazar()"><i class="fa fa-mail-reply"></i> Reemplazar</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Project Management</th>
+                                            <td>Pepe Gacitua</td>
+                                            <td></td>
+                                            <td>
+                                                20
+                                            </td>
+                                            <td>
+                                                30
+                                            </td>
+                                            <td>
+                                                13
+                                            </td>
+                                            <td>
+                                                32
+                                            </td>
+                                            <td>
+                                                43
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-warning mr-2"><i class="fa fa-mail-reply"></i> Reemplazar</button>
+                                            </td>
+                                            <tr>
+                                                <th>Project Management</th>
+                                                <td>Jose Meneses</td>
+                                                <td></td>
+                                                <td>
+                                                    20
+                                                </td>
+                                                <td>
+                                                    30
+                                                </td>
+                                                <td>
+                                                    13
+                                                </td>
+                                                <td>
+                                                    32
+                                                </td>
+                                                <td>
+                                                    43
+                                                </td>
+                                                <td>
+                                                    <button type="button" class="btn btn-outline-warning mr-2"><i class="fa fa-mail-reply"></i> Reemplazar</button>
+                                                </td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -323,8 +418,8 @@
         }
     }
 
-    function showDivEdit() {
-        var x = document.getElementById('div-edit');
+    function showDivReplace() {
+        var x = document.getElementById('div-replace');
         if (x.style.display === "none") {
             x.style.display = "block";
         } else {
@@ -358,6 +453,36 @@
             x.style.display = "none";
         }
     }
+
+    function Eliminar() {
+        var x = document.getElementById("tr1");
+        x.deleteRow(0);
+
+    }
+    function AgregarRecurso() {
+    var table = document.getElementById("myTable");
+    var row = table.insertRow(1);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2)
+    var cell4 = row.insertCell(3)
+    var cell5 = row.insertCell(4)
+    var cell6 = row.insertCell(5)
+    var cell7 = row.insertCell(6)
+    var cell8 = row.insertCell(7)
+    cell1.innerHTML = "Project Management";
+    cell2.innerHTML = "Juan Malverde";
+    cell3.innerHTML = "";
+    cell4.innerHTML="20";
+    cell5.innerHTML="30";
+    cell6.innerHTML="13";
+    cell7.innerHTML="42";
+    cell8.innerHTML="43";
+}
+function Reemplazar() {
+    var x = document.getElementById("myTable").rows[1].cells;
+    x[1].innerHTML = "Juan Buenverde";
+}
     </script>
 </body>
 
