@@ -149,7 +149,7 @@
                                                 <th> 04/2018</th>
                                                 <th> 05/2018</th>
                                                 <th>
-                                                    <button href="#" class="btn btn-primary btn-sm">Agregar Recurso</button>
+                                                    <button type="button" class="btn btn-outline-success mr-2" onclick="showDivAgregarRecurso()">Agregar Recurso</button>
                                                 </th>
                                             </tr>
                                         </thead>
@@ -225,9 +225,102 @@
                                         </tbody>
                                     </table>
                                 </div>
+
+                            </div>
+                            <div class="table-responsive" id="div-AgregarRecurso" style="display:none;">
+                                <table class="table center-aligned-table">
+                                    <thead>
+                                        <!--aca quiero un TR que abarque todos los tr que tengan que ver con el tiempo -->
+                                        <tr class="text-primary">
+                                            <th>
+                                                Rol
+                                            </th>
+                                            <th>Nombre</th>
+                                            <th>Empresa</th>
+                                            <th> 01/2018</th>
+                                            <th> 02/2018</th>
+                                            <th> 03/2018</th>
+                                            <th> 04/2018</th>
+                                            <th> 05/2018</th>
+                                            <th>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>Project Management</th>
+                                            <td>Juan Malverde</td>
+                                            <td></td>
+                                            <td>
+                                                20
+                                            </td>
+                                            <td>
+                                                30
+                                            </td>
+                                            <td>
+                                                13
+                                            </td>
+                                            <td>
+                                                32
+                                            </td>
+                                            <td>
+                                                43
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-success mr-2" onclick="AgregarRecurso()">Agregar Recurso</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Project Management</th>
+                                            <td>Pepe Gacitua</td>
+                                            <td></td>
+                                            <td>
+                                                20
+                                            </td>
+                                            <td>
+                                                30
+                                            </td>
+                                            <td>
+                                                13
+                                            </td>
+                                            <td>
+                                                32
+                                            </td>
+                                            <td>
+                                                43
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-success mr-2">Agregar Recurso</button>
+                                            </td>
+                                            <tr>
+                                                <th>Project Management</th>
+                                                <td>Jose Meneses</td>
+                                                <td></td>
+                                                <td>
+                                                    20
+                                                </td>
+                                                <td>
+                                                    30
+                                                </td>
+                                                <td>
+                                                    13
+                                                </td>
+                                                <td>
+                                                    32
+                                                </td>
+                                                <td>
+                                                    43
+                                                </td>
+                                                <td>
+                                                    <button type="button" class="btn btn-outline-success mr-2">Agregar Recurso</button>
+                                                </td>
+                                            </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
+
                 </div>
                 <!-- partial:partials/_footer.html -->
                 <footer class="footer">
@@ -256,6 +349,15 @@
         var x = document.getElementById("tr1");
         x.deleteRow(0);
 
+    }
+
+    function showDivAgregarRecurso() {
+        var x = document.getElementById('div-AgregarRecurso');
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
     }
     </script>
 </body>
