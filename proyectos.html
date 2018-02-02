@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="node_modules/perfect-scrollbar/dist/css/perfect-scrollbar.min.css" />
     <link rel="stylesheet" href="node_modules/flag-icon-css/css/flag-icon.min.css" />
     <link rel="stylesheet" href="css/style.css" />
-    
 </head>
 
 <body>
@@ -88,6 +87,8 @@
                                     <div>
                                         <label for="form-field-select-1"><strong>Fecha fin proyecto</strong>: DD/MM/AAAA</label>
                                     </div>
+                                    <hr>
+                                    <button href="#" class="btn btn-primary btn-sm">Buscar</button>
                                 </div>
                             </div>
                         </div>
@@ -109,7 +110,7 @@
                                                 <th> 04/2018</th>
                                                 <th> 05/2018</th>
                                                 <th>
-                                                    <button href="#" class="btn btn-primary btn-sm" onclick="showDivAgregarRecurso()">Agregar Recurso</button>
+                                                    <button type="button" class="btn btn-outline-success mr-2" onclick="showDivAgregarRecurso()">Agregar Recurso</button>
                                                 </th>
                                             </tr>
                                         </thead>
@@ -131,10 +132,12 @@
                                                     32
                                                 </td>
                                                 <td>
-                                                    43
+                                                    20
                                                 </td>
                                                 <td>
-                                                    <button href="#" class="btn btn-primary btn-sm">Ver Recurso</button>
+                                                    <button type="button" class="btn btn-outline-info mr-2" onclick="showDivEditHH()"> <i class="fa fa-clock-o"></i> Editar HH</button>
+                                                    <button type="button" class="btn btn-outline-warning mr-2"><i class="fa fa-mail-reply"></i> Reemplazar</button>
+                                                    <button type="button" class="btn btn-outline-danger"><i class="fa fa-times"></i>Eliminar</button>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -157,7 +160,9 @@
                                                     43
                                                 </td>
                                                 <td>
-                                                    <button href="#" class="btn btn-primary btn-sm">Ver Recurso</button>
+                                                    <button type="button" class="btn btn-outline-info mr-2" onclick="showDivEditHH()"> <i class="fa fa-clock-o"></i> Editar HH</button>
+                                                    <button type="button" class="btn btn-outline-warning mr-2"><i class="fa fa-mail-reply"></i> Reemplazar</button>
+                                                    <button type="button" class="btn btn-outline-danger"><i class="fa fa-times"></i>Eliminar</button>
                                                 </td>
                                                 <tr>
                                                     <th>Quality Assurance</th>
@@ -179,7 +184,9 @@
                                                         43
                                                     </td>
                                                     <td>
-                                                        <button href="#" class="btn btn-primary btn-sm">Ver Recurso</button>
+                                                        <button type="button" class="btn btn-outline-info mr-2" onclick="showDivEditHH()"> <i class="fa fa-clock-o"></i> Editar HH</button>
+                                                        <button type="button" class="btn btn-outline-warning mr-2"><i class="fa fa-mail-reply"></i> Reemplazar</button>
+                                                        <button type="button" class="btn btn-outline-danger"><i class="fa fa-times"></i>Eliminar</button>
                                                     </td>
                                                 </tr>
                                         </tbody>
@@ -231,7 +238,7 @@
                                                 43
                                             </td>
                                             <td>
-                                                <button href="#" class="btn btn-primary btn-sm">Agregar Recurso</button>
+                                                <button type="button" class="btn btn-outline-success mr-2">Agregar Recurso</button>
                                             </td>
                                         </tr>
                                         <tr>
@@ -254,7 +261,7 @@
                                                 43
                                             </td>
                                             <td>
-                                                <button href="#" class="btn btn-primary btn-sm">Agregar Recurso</button>
+                                                <button type="button" class="btn btn-outline-success mr-2">Agregar Recurso</button>
                                             </td>
                                             <tr>
                                                 <th>Project Management</th>
@@ -276,7 +283,7 @@
                                                     43
                                                 </td>
                                                 <td>
-                                                    <button href="#" class="btn btn-primary btn-sm">Agregar Recurso</button>
+                                                    <button type="button" class="btn btn-outline-success mr-2">Agregar Recurso</button>
                                                 </td>
                                             </tr>
                                     </tbody>
@@ -304,7 +311,6 @@
     <script src="node_modules/chart.js/dist/Chart.min.js"></script>
     <script src="node_modules/perfect-scrollbar/dist/js/perfect-scrollbar.jquery.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5NXz9eVnyJOA81wimI8WYE08kW_JMe8g&callback=initMap" async defer></script>
-   
     <script src="js/chart.js"></script>
     <script>
     //mostrar y ocultar divs :DDDD 
